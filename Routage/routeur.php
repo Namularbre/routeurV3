@@ -23,6 +23,7 @@ class Routeur {
                 }
             }
         }
+        //TODO : rediriger vers une page d'erreurs
         echo "Pas de route pour " .$urlBrute . " /" . $url;
     }
 
