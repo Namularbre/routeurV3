@@ -50,7 +50,7 @@ $routes = [new Route("", __DIR__ . "Vues/Vue.php", GET, function ($route){
             //Note : on peut mettre un controlleur à la place du chemin et le mettre dans le require_once en haut.
             require ($route->avoirChemin());
         }),
-        new Route("/", __DIR__ . "Vue/Vue2.php", GET, null),
+        new Route("/", __DIR__ . "Vue/VueSaisi.php", GET, null),
         new Route("affichageFruit", __DIR__ . "/Vues/VueInsertion.php", POST, function ($route){
             require_once("/controleurs/Controleur.php");
 
