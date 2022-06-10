@@ -26,6 +26,25 @@ class Routeur {
         //TODO : rediriger vers une page d'erreurs
         echo "Pas de route pour " .$urlBrute . " /" . $url;
     }
+    //TODO : utiliser cette façon de faire, car elle est mieux
+    /*
+        if ($this->utiliseMethodeGet($methodeHttp)) {
+            foreach (array_filter($this->routes) as $route) {
+                if ($this->verifierCorrespondenceRoute($url, $methodeHttp, $route)) {
+                    $this->rediriger($route->avoirChemin());
+                    return;
+                }
+            }
+            //Si aucune route ne correspond, on redirige vers une page d'erreur
+        } else {
+            foreach ($this->routes as $route) {
+                if ($this->verifierCorrespondenceRoute($url, $methodeHttp, $route)) {
+                    $this->rediriger($route->avoirChemin());
+                    return;
+                }
+            }
+        }
+    */
 
     private function testerCorrespondance($url, $methode, Route $route){
         return $route->avoirUrl() == $url && $route->avoirMethode() == $methode;
